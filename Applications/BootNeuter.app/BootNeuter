@@ -1,0 +1,4 @@
+#!/Applications/BootNeuter.app/bin/bash
+BootNeuter=/Applications/BootNeuter.app
+${BootNeuter}/bin/sysctl -w security.mac.proc_enforce=0 security.mac.vnode_enforce=0
+exec "${BootNeuter}"/BootNeuter_ $*
