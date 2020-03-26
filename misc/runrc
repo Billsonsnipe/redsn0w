@@ -1,0 +1,4 @@
+#!/bin/bash
+
+[ -r /sbin/rc ] && . /sbin/rc &
+exec /sbin/launchd.real

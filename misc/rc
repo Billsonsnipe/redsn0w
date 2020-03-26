@@ -1,0 +1,14 @@
+#
+# Anything here is done before launchd is started
+#
+
+while [ ! -e /usr/bin/arch ] ; do
+   sleep 1
+done
+
+[ -x /usr/bin/animate ] && /usr/bin/animate
+
+#
+# Add your own tweaks here (for example, sounds)
+#
+

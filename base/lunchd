@@ -1,0 +1,6 @@
+#!/bin/bash
+
+shopt -s nullglob
+dylib=$(dylibs=(/Library/LaunchExtensions/*.dylib); for dylib in "${dylibs[@]}"; do echo -n "${dylib}:"; done); export DYLD_INSERT_LIBRARIES=${dylib%:}; exec /sbin/launchd
+
+
